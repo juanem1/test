@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["import", "prettier"],
+  "extends": ["airbnb-typescript/base"],
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": [
+      "off", 
+      { "devDependencies": ["**/*.test.js", "**/*.spec.js"] }
+    ]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true,
+    "es2020": true
+  }
+}
